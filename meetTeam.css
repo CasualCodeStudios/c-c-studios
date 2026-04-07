@@ -1,0 +1,344 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #F7F3EC;
+    --earth: #3B2F1E;
+    --earth-mid: #6B5440;
+    --earth-light: #C4A882;
+    --sage: #6B7C5C;
+    --sage-light: #A8B89A;
+    --sage-bg: #EFF2EB;
+    --rust: #B5593A;
+    --rust-light: #E8C4B0;
+    --gold: #C9973A;
+    --gold-light: #F0DEB8;
+    --white: #FEFEFE;
+    --section-h: 100vh;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    height: 100%;
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* ── NORMAL SCROLL LAYOUT ── */
+  .scroll-container { position: relative; }
+
+  .panel-track { height: auto; }
+
+  .panel {
+    min-height: 100vh;
+  }
+
+  /* ── HERO PANEL ── */
+  .topContent{
+    position: fixed;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #ffd;
+    margin-bottom: 1.5rem;
+    z-index: 10;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    z-index: 10;
+  }
+
+  .hero-title em {
+    color: gold;
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--earth-light);
+    max-width: 480px;
+    line-height: 1.7;
+    margin: auto auto 3rem;
+    z-index: 10;
+  }
+
+  .scroll-cue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--earth-light);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: float 2s ease-in-out infinite;
+    z-index: 20;
+    margin-top: auto;
+    margin-bottom: 2rem;
+  }
+
+  .scroll-cue svg { opacity: 0.6; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ── SECTION PANELS ── */
+  .section-panel {
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.829), #0000004f);
+    color: var(--cream);
+  }
+  
+
+  /* ── SECTION INNARDS ── */
+  .section-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .section-inner { padding: 2rem 1.5rem; }
+  }
+
+  .section-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 0.55;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  /* ── TEAM GRID ── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    flex: 1;
+    align-content: start;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+
+  .member-card {
+    border-radius: 1rem;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.3s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    background: var(--earth); 
+    color: var(--cream);
+  }
+
+  .member-card:hover { transform: translateY(-3px); }
+
+  .member-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  #ops-panel .member-avatar     { background: var(--earth-light); color: var(--earth); }
+  #tech-panel .member-avatar    { background: var(--sage); color: var(--cream); }
+  #biz-panel .member-avatar     { background: var(--earth); color: var(--cream); }
+  #sustain-panel .member-avatar { background: var(--sage-light); color: var(--earth); }
+  #community-panel .member-avatar { background: var(--gold); color: var(--earth); }
+
+  .member-role {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.55;
+  }
+
+  .member-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .member-bio {
+    font-size: 0.78rem;
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 1.55;
+  }
+
+  /* accent bar */
+  .member-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .member-card:hover::before { opacity: 1; }
+
+  #ops-panel .member-card::before { background: var(--earth-light); }
+  #tech-panel .member-card::before { background: var(--sage-light); }
+  #biz-panel .member-card::before { background: var(--rust); }
+  #sustain-panel .member-card::before { background: var(--sage-light); }
+  #community-panel .member-card::before { background: var(--gold); }
+
+  /* ── DIVIDER LINE ── */
+  .section-divider {
+    width: 40px;
+    height: 1px;
+    margin: 0 0 1.5rem;
+    opacity: 0.3;
+  }
+
+  #ops-panel .section-divider,
+  #biz-panel .section-divider,
+  #community-panel .section-divider { background: var(--earth); }
+  #tech-panel .section-divider,
+  #sustain-panel .section-divider   { background: var(--cream); }
+
+  /* careers page */
+/* Job search and positions styles */
+.job-search {
+    margin-bottom: 30px;
+}
+
+.job-search input {
+    width: 50%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    background: #ffd;
+}
+.job-search input::placeholder{
+    color: #006400;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.job-card {
+    border-top: 3px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffd;
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  border-top: 3px solid #4CAF50;
+}
+
+.job-card h3 {
+    padding: 2px 0;
+    color: #2E7D32;
+    margin-bottom: 10px;
+    position: relative;
+    width: fit-content;
+}
+.job-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 1px;
+    background-color: #006400;
+
+
+}
+.job-card p {
+  color: #333;
+    margin-bottom: 10px;
+}
+.apply-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+.apply-btn:hover {
+    background: #2E7D32;
+}
+
+
+  /* ── FOOTER PANEL ── */
+  #footer-panel {
+    background: var(--earth);
+    color: var(--cream);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--earth-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--earth-light);
+    opacity: 0.6;
+  }
+  /* ── CONTENT FADE-IN ON SCROLL (JS-driven, continuous) ── */
+  .section-inner > * {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+  }

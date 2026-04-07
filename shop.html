@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is our SunRise Valley Farms shop, showcasing our products, with a focus on quality and sustainability and all products in different categories.">
+  <link rel="stylesheet" href="meetTeam.css">
+  <link rel="stylesheet" href="mainStyles.css">
+  <link rel="stylesheet" href="shopStyles.css">
+  <link rel="shortcut icon" href="sunrise.png" type="image/png">
+  <title>Farm Shop</title>
+</head>
+<body>
+
+<!-- Scroll to top button -->
+    <a href="#hero" class="scroll-to-top" id="scrollToTop"><img src="up-arrow.png" alt="up arrow"></a>
+
+
+<!-- Hero section -->
+    <section id="hero" class="section">
+        <div class="topContent" id="shopTopContent">
+                    <!-- Hero image and content -->
+            <img class="frontImg" src="logoPic-removebg.png" alt="logo">
+<!-- Main Header -->
+        <header class="header" id="mainHeader">
+
+<!-- Logo -->
+        <div class="logo">
+            <a href="index.html"><img src="logoPic-removebg.png" alt="logo"></a>
+        </div>
+<!-- Navigation -->
+        <div class="mainNav">
+            <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meetTeam.html">Our Team</a></li>
+            <li><a href="meetTeam.html">Apply for Jobs</a></li>
+          </ul>
+        <div class="navigation-actions">
+          <button onclick="setCartVisible(true)" class="cartLink"><img src="shoppingCart.png" alt=""> <span class="cart-count">0</span></button>
+          <a href="login.html" class="loginBtn">Sign In</a>
+        </div>
+        </div>
+
+<!-- Hamburger Menu Button -->
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+      </header>
+
+<!-- Sidebar Menu -->
+        <div id="sidebar" class="sidebar">
+            <ul class="sidebar-nav">
+              <li><button onclick="setCartVisible(true)" class="cartLink">Cart <span class="cart-count">0</span></button></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Our Shop</a></li>
+                <li><a href="meetTeam.html">Our Team</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="meetTeam.html">Apply for Jobs</a></li>
+            </ul>
+            <a href="login.html" class="loginBtn">Sign In</a>
+        </div>
+      </div>
+
+
+<!-- hero sliding images -->
+         <div class="imageContainer">
+            <!-- Our farms -->
+            <div class="heroContent one">
+                <img src="dryWheat.jpg" alt="field of wheat">
+                <div class="heroText">
+                  <h2>SunRise Valley Farms</h2>
+            <p>Premium poultry, dairy, and farm produce - Grown with Care, delivered with pride</p>
+                </div>
+            </div>
+            <!-- farm produce -->
+            <div class="heroContent two">
+                <img src="farmProduce.jpg" alt="veggies in the field">
+                <div class="heroText">
+                  <h2>Farm Produce</h2>
+            <p>Premium poultry, dairy, and farm produce - Grown with Care, delivered with pride</p>
+                </div>
+            </div>
+            <!-- poultry farms -->
+            <div class="heroContent three">
+                <img src="poultryPlace.jpg" alt="fresh farm eggs">
+                <div class="heroText">
+                  <h2>Our Poultry Farms</h2>
+            <p>Premium poultry, dairy, and farm produce - Grown with Care, delivered with pride</p>
+                </div>
+            </div>
+            <!-- men at work -->
+            <div class="heroContent four">
+                <img src="men@Work.jpg" alt="packaging process">
+                <div class="heroText">
+                  <h2>Farm Packaging</h2>
+            <p>Premium poultry, dairy, and farm produce - Grown with Care, delivered with pride</p>
+                </div>
+            </div>
+            <!-- transport -->
+            <div class="heroContent five">
+                <img src="transport.jpg" alt="transport trailer">
+                <div class="heroText">
+                  <h2>Fast Delivery</h2>
+            <p>Premium poultry, dairy, and farm produce - Grown with Care, delivered with pride</p>
+                </div>
+            </div>
+            
+         </div>
+
+            <div class="scroll-cue">
+        <span>Scroll to explore</span>
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+          <path d="M8 4v16M2 14l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+<!-- shopping section -->
+    <section id="shopping" class="section">
+        <!-- Search bar -->
+        <div class="searchBar">
+          <h3>...looking for??</h3>
+            <input type="text" id="productSearch" placeholder="Search products...">
+        </div>
+        <!-- Add shopping content here -->
+         <div class="shopContainerGrid">
+
+<!-- poultry section -->
+              <div class="shopCategory">
+                  <h2>Poultry</h2>
+                  <div class="productContainer" id="scrollable">
+                    <!-- mature broilers -->
+                    <div class="productCard" data-name="Mature Broilers" data-price="1200" data-img="matureBroilers.jpg">
+                      <img src="matureBroilers.jpg" alt="mature broilers">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Mature Broilers</p>
+                        <p>Kes. 1,200 /bird
+                        </p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+
+                    <!-- chicks for sale -->
+                    <div class="productCard" data-name="3 day chicks" data-price="150" data-img="saleChicks.jpg">
+                      <img src="saleChicks.jpg" alt="chicks for sale">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>3 day chicks</p>
+                        <p>Kes. 150 /chick</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+
+                    <!-- fresh eggs -->
+                    <div class="productCard" data-name="Fresh Farm Eggs" data-price="500" data-img="freshEggs.jpg">
+                      <img src="freshEggs.jpg" alt="fresh eggs">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Fresh Farm Eggs</p>
+                        <p>Kes. 500 /dozen</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+
+                    <!-- whole packaged chicken -->
+                    <div class="productCard" data-name="Packaged Chicken" data-price="2000" data-img="wholePackaged.jpg">
+                      <img src="wholePackaged.jpg" alt="whole packaged chicken">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Packaged Chicken</p>
+                        <p>Kes. 2,000 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+
+                    <!-- chicken breasts -->
+                    <div class="productCard" data-name="Chicken Breasts" data-price="750" data-img="chickenBreasts.jpg">
+                      <img src="chickenBreasts.jpg" alt="breast of chicken">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Chicken Breasts</p>
+                        <p>Kes. 750 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- chicken drumsticks -->
+                    <div class="productCard" data-name="Chicken Drumsticks" data-price="950" data-img="chickenDrumsticks.jpg">
+                      <img src="chickenDrumsticks.jpg" alt="drumsticks of chicken">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Chicken Drumsticks</p>
+                        <p>Kes. 950 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- chicken thighs -->
+                    <div class="productCard" data-name="Chicken Thighs" data-price="950" data-img="chickenThighs.jpg">
+                      <img src="chickenThighs.jpg" alt="thighs of chicken">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Chicken Thighs</p>
+                        <p>Kes. 950 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- chicken wings -->
+                    <div class="productCard" data-name="Chicken Wings" data-price="550" data-img="chickenWings.jpg">
+                      <img src="chickenWings.jpg" alt="wings of chicken">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Chicken Wings</p>
+                        <p>Kes. 550 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="scrolling">
+                    <button class="scroll-btn left" onclick="scrollContainerLeft()">&lt;</button>
+                    <button class="scroll-btn right" onclick="scrollContainerRight()">&gt;</button>
+                  </div>
+              </div>
+
+<!-- dairy and meat section -->
+              <div class="shopCategory">
+                  <h2>Dairy and Meat</h2>
+                  <div class="productContainer" id ="scrollable1">
+                    <!-- Farm Fresh Milk -->
+                    <div class="productCard" data-name="Fresh Milk" data-price="150" data-img="freshMilk.jpg">
+                      <img src="freshMilk.jpg" alt="Farm Fresh Milk">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Fresh Milk</p>
+                        <p>Kes. 150 /Ltr</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- Farm Fresh Cheese -->
+                    <div class="productCard" data-name="Cheese" data-price="1000" data-img="cheese.jpg">
+                      <img src="cheese.jpg" alt="Farm Fresh Cheese">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Cheese</p>
+                        <p>Kes. 1,000 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- farm fresh ghee -->
+                    <div class="productCard" data-name="Ghee" data-price="850" data-img="ghee.jpg">
+                      <img src="ghee.jpg" alt="Farm Fresh Ghee">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Ghee</p>
+                        <p>Kes. 850 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                      <!-- farm fresh yogurt -->
+                    <div class="productCard" data-name="Fresh Yogurt" data-price="250" data-img="yogurt.jpg">
+                      <img src="yogurt.jpg" alt="Farm Fresh Yogurt">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Fresh Yogurt</p>
+                        <p>Kes. 250 /Ltr</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- beef products -->
+                     <!-- sirloin steak -->
+                    <div class="productCard" data-name="Sirloin Steak" data-price="1200" data-img="sirloin.jpg">
+                      <img src="sirloin.jpg" alt="Farm Fresh Steak">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Sirloin Steak</p>
+                        <p>Kes. 1,200 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- ground beef -->
+                     <div class="productCard" data-name="Ground Beef" data-price="800" data-img="groundBeef.jpg">
+                      <img src="groundBeef.jpg" alt="Farm Fresh Steak">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Ground Beef</p>
+                        <p>Kes. 800 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="scrolling">
+                    <button class="scroll-btn left" onclick="scrollContainer1Left()">&lt;</button>
+                    <button class="scroll-btn right" onclick="scrollContainer1Right()">&gt;</button>
+                  </div>
+              
+                </div>
+
+<!-- farm produce section -->
+              <div class="shopCategory">
+                  <h2>Farm Produce</h2>
+                  <div class="productContainer" id ="scrollable2">
+                    <!-- farm produce items -->
+                     <!-- kale and spinach -->
+                    <div class="productCard" data-name="Kale & Spinach" data-price="250" data-img="kaleSpinach.jpg">
+                      <img src="kaleSpinach.jpg" alt="Farm Fresh Kale & Spinach">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Kale & Spinach</p>
+                        <p>Kes. 250 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- tomatoes -->
+                    <div class="productCard" data-name="Tomatoes" data-price="150" data-img="tomatoes.jpg">
+                      <img src="tomatoes.jpg" alt="Farm Fresh Tomatoes">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Tomatoes</p>
+                        <p>Kes. 150 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- mangoes -->
+                     <div class="productCard" data-name="Mangoes" data-price="80" data-img="mangoes.jpg">
+                      <img src="mangoes.jpg" alt="Farm Fresh Mangoes">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Mangoes</p>
+                        <p>Kes. 80 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!--  carrots -->
+                    <div class="productCard" data-name="Carrots" data-price="65" data-img="carrots.jpg">
+                      <img src="carrots.jpg" alt="Farm Fresh Carrots">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Carrots</p>
+                        <p>Kes. 65 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                     <!-- bananas -->
+                     <div class="productCard" data-name="Bananas" data-price="60" data-img="bananas.jpg">
+                      <img src="bananas.jpg" alt="Farm Fresh Bananas">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Bananas</p>
+                        <p>Kes. 60 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- potatoes -->
+                    <div class="productCard" data-name="Irish Potatoes" data-price="120" data-img="potatoes.jpg">
+                      <img src="potatoes.jpg" alt="Farm Fresh Potatoes">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Irish Potatoes</p>
+                        <p>Kes. 120 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- corn -->
+                    <div class="productCard" data-name="Fresh Corn" data-price="105" data-img="maize.jpg">
+                      <img src="maize.jpg" alt="Farm Fresh Corn">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Fresh Corn</p>
+                        <p>Kes. 105 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- dried corn -->
+                    <div class="productCard" data-name="Dried Corn" data-price="150" data-img="driedMaize.jpg">
+                      <img src="driedMaize.jpg" alt="Dried Corn">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Dried Corn</p>
+                        <p>Kes. 150 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                      </div>
+                    <!-- green beans -->
+                     <div class="productCard" data-name="Green Beans" data-price="130" data-img="greenBeans.jpg">
+                      <img src="greenBeans.jpg" alt="Farm Fresh Green Beans">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Green Beans</p>
+                        <p>Kes. 130 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- dried beans -->
+                     <div class="productCard" data-name="Dried Beans" data-price="250" data-img="driedBeans.jpg">
+                      <img src="driedBeans.jpg" alt="Dried Beans">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Dried Beans</p>
+                        <p>Kes. 250 /kg</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- sugarcane -->
+                     <div class="productCard" data-name="Sugarcane" data-price="75" data-img="sugarcane.jpg">
+                        <img src="sugarcane.jpg" alt="Sugarcane">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Sugarcane</p>
+                        <p>Kes. 75 /stalk</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                        </div>
+                        
+                    </div>
+                    
+                  </div>
+                  <div class="scrolling">
+                    <button class="scroll-btn left" onclick="scrollContainer2Left()">&lt;</button>
+                    <button class="scroll-btn right" onclick="scrollContainer2Right()">&gt;</button>
+                  </div>
+
+              
+                </div>
+    
+<!-- merchandise section and cloth branding -->
+              <div class="shopCategory">
+                  <h2>Merchandise</h2>
+                  <div class="productContainer" id="scrollable3">
+                    <!-- cover white -->
+                    <div class="productCard" data-name="White Front Cover" data-price="1750" data-img="coverWhite.png">
+                      <img src="coverWhite.png" alt="white front cover">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>White Front Cover</p>
+                        <p>Kes. 1,750 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- cover Brown -->
+                    <div class="productCard" data-name="Brown Front Cover" data-price="1750" data-img="coverBrown.png">
+                      <img src="coverBrown.png" alt="brown front cover">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Brown Front Cover</p>
+                        <p>Kes. 1,750 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- cap white -->
+                    <div class="productCard" data-name="White Cap" data-price="1200" data-img="capWhite.png">
+                      <img src="capWhite.png" alt="white cap">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>White Cap</p>
+                        <p>Kes. 1,200 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- tshirt Brown -->
+                    <div class="productCard" data-name="Brown T-Shirt" data-price="1500" data-img="tshirtBrown.png">
+                      <img src="tshirtBrown.png" alt="brown t-shirt">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Brown T-Shirt</p>
+                        <p>Kes. 1,500 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- jacket white -->
+                    <div class="productCard" data-name="White Jacket" data-price="2500" data-img="jacketWhite.png">
+                      <img src="jacketWhite.png" alt="white jacket">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>White Jacket</p>
+                        <p>Kes. 2,500 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- cap Brown -->
+                    <div class="productCard" data-name="Brown Cap" data-price="1200" data-img="capBrown.png">
+                      <img src="capBrown.png" alt="Brown cap">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Brown Cap</p>
+                        <p>Kes. 1,200 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- tshirt white -->
+                    <div class="productCard" data-name="White T-Shirt" data-price="1500" data-img="tshirtWhite.png">
+                      <img src="tshirtWhite.png" alt="white t-shirt">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>White T-Shirt</p>
+                        <p>Kes. 1,500 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- jacket brown -->
+                    <div class="productCard" data-name="Brown Jacket" data-price="2500" data-img="jacketBrown.png">
+                      <img src="jacketBrown.png" alt="brown jacket">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Brown Jacket</p>
+                        <p>Kes. 2,500 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- sweater white -->
+                    <div class="productCard" data-name="White Sweater" data-price="1800" data-img="sweaterWhite.png">
+                      <img src="sweaterWhite.png" alt="white sweater">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>White Sweater</p>
+                        <p>Kes. 1,800 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    <!-- sweater brown -->
+                    <div class="productCard" data-name="Brown Sweater" data-price="1800" data-img="sweaterBrown.png">
+                      <img src="sweaterBrown.png" alt="Brown sweater">
+                      <div class="billing">
+                        <div class="priceText">
+                          <p>Brown Sweater</p>
+                        <p>Kes. 1,800 /item</p>
+                        </div>
+                        <img class="cart add-to-cart" src="shoppingCart.png" alt="Add to Cart">
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="scrolling">
+                    <button class="scroll-btn left" onclick="scrollContainer3Left()">&lt;</button>
+                    <button class="scroll-btn right" onclick="scrollContainer3Right()">&gt;</button>
+                  </div>
+                    
+              
+                </div>
+         </div>
+
+    </section>
+
+    <!-- cart panel (hidden until item added) -->
+    <section id="cartSection" style="display: block;">
+      <div class="cart-container" id="cartContainer">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button id="closeCartBtn" class="close-cart">Close</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-summary">
+          <p style = 'padding-left: 10px;'>Total: <span id="cartTotal">Kes. 0</span></p>
+          <button id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </section>
+
+<!-- contact us -->
+    <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to learn more about our products? Reach out to us!</p>
+            <div class="contactGrid">
+                <div class="contactInfo">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> 123 Harvest Lane, SunRise Valley, State, 50000</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a6c5c9c8d2c7c5d2e6d5d3c8d4cfd5c3d0c7cacac3dfc0c7d4cbd588c5c9cb">[email&#160;protected]</a></p>
+
+                    <h3>Connect with us</h3>
+                    <div class="socialLinks">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="instagram.png" alt=""></a>
+                        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="tik-tok.png" alt=""></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="facebook.png" alt=""></a>
+                        <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer"><img src="whatsapp.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="contactMap">
+                    <iframe title="SunRise Valley Farms map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.123456789012!2d-122.41941548468102!3d37.7749292797596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c9e91011b%3A0x1a2b3c4d5e6f7g8h!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html#hero">
+                  <img src="logoPic-removebg.png" alt="SunRise Valley Farms Logo">
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="shop.html">Our Shop</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Reach Us</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to our Newsletter</h4>
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <blockquote>
+                "Farming is not just about growing food; it's about nurturing communities, preserving traditions, and ensuring a sustainable future for generations to come."
+                <cite>- Founder</cite>
+            </blockquote>
+            <div class="copyright">
+                <p>&copy; 2026 SunRise Valley Farms. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  <script src="main.js">
+    </script>
+
+    <!-- Page Transition Overlay -->
+   <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition">
+        <div class="page-container">
+            <div class="page-front">
+                <div class="page-content">
+                    <h1>Our Shop</h1>
+                    <p>Page 2</p>
+                </div>
+                <div class="page-number">2</div>
+            </div>
+            <div class="page-back">
+                <div class="page-content">
+                    <h1>Meet Our Team</h1>
+                    <p>Page 3</p>
+                </div>
+                <div class="page-number">3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+
+
+/* job application form */
+.application-hero{
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    display: flex;
+    color: #ffd;
+    text-align: center;
+    height: 100vh;
+}
+
+.scroll-cue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(218, 165, 32, 0.521);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: float 2s ease-in-out infinite;
+    z-index: 20;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+.hero-copy{
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    right: 0;
+}
+.hero-copy h1{
+    font-family: 'Playfair Display', serif;
+    color: #ffd;
+    font-size: clamp(3rem, 8vw, 6rem);
+}
+.hero-copy p{
+    padding: 10px 0;
+    font-size: 1.2rem;
+     font-weight: 300;
+     line-height: 1.2;}
+.application-section{
+    background: linear-gradient(to right, transparent, #0000009c,#000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-inner{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    color: #ffd;
+    width: 100%;
+    min-height: 100vh;
+}
+.applicationText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.section-tag{
+    color: #ffd;
+    position: relative;
+    font-size: clamp(2em, 5vw, 3em);
+    margin: 10px 0;
+}
+.section-tag span{
+    color: gold;
+}
+.section-tag::before{
+    content: "ly...";
+    position: absolute;
+    bottom: -11px;
+    left: 31%;
+    font-size: 0.5em;
+    font-weight: 600;
+    color: gold;
+
+}
+.section-tag::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 3px;
+    width: 30%;
+    background-color: gold;
+}
+.section-title{
+    text-align: center;
+    color: #006400;
+    text-decoration: underline;
+    text-decoration-color: gold;
+    font-size: clamp(3em, 7vw, 5em);
+    padding: 20px 0;
+}
+.section-title span{
+    color: gold;
+    text-decoration: underline;
+    text-decoration-color: #006400;
+}
+.section-copy{
+    padding: 10px 0;
+    font-size: 1.2rem;
+     font-weight: 300;
+     line-height: 1.2;
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+/* form styling */
+.application-form{
+    max-width: 450px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+
+}
+.application-form label{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px 10px 10px 10px;
+    box-shadow: 2px 3px 5px black;
+    backdrop-filter: blur(30px);
+    background: #0036008e;
+    border-left: 3px solid gold;
+    transition: transform 0.3s ease;
+}
+.application-form label:hover{
+    transform: scale(1.05);
+}
+.application-form label p{
+    font-size: 16px;
+    font-style: italic;
+    padding: 2px 5px;
+    color: gold;
+
+}
+.application-form input{
+    border: 1px solid #ffd;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 16px;
+    backdrop-filter: blur(-30px);
+    outline: none;
+    color: #ffd;
+    background: #00000045;
+
+}
+.application-form label select{
+    padding: 5px;
+    background: #ffd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #000;
+    
+}
+.application-form label select option{
+    background: #ffd;
+    color: #000;
+}
+.application-form label textarea{
+    background: #ffd;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 100px;
+}
+.application-form label textarea::placeholder{
+    color: #000;
+}
+.submitBtn{
+    background-color: #ffd;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #034203;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.submitBtn:hover{
+    box-shadow: 2px 3px 5px black;
+    backdrop-filter: blur(30px);
+    background-color: #00360061;
+    color: #ffd;
+}
+
+@media (max-width: 768px) {
+    .section-inner{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-copy{
+        bottom: 30%;
+    }
+    .section-title{
+        font-size: 2.5em;
+    }
+    .application-form{
+        width: 100%;
+        padding: 10px;
+    }
+    .application-form label{
+        padding: 5px;
+    }
+    .application-form input, .application-form label select, .application-form label textarea{
+        padding: 4px;
+    }
+}
