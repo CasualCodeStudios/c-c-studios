@@ -9,12 +9,13 @@ body{
   color:#fff;
 }
 main{
+  position: relative;
   min-height:100vh; 
   display:flex; 
   align-items:center; 
   justify-content:center;
 }
-.auth-wrapper{
+.authWrapper{
   max-width:420px; 
   margin: 100px auto; 
   background: rgba(255,255,255,0.08); 
@@ -22,12 +23,26 @@ main{
   border:1px solid rgba(255,255,255,0.25); 
   border-radius:12px; 
   padding:24px;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2); /* start smaller
+  opacity: 0;
+  transform: scale(0.2); /* start smaller, like in background */
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none; /* prevent clicks when hidden */
+}
+.authWrapper.visible{
+  opacity: 1;
+  transform: scale(1); /* resurface to full size */
+  pointer-events: auto;
+  z-index: 1;
 }
 h1{
   margin-bottom:8px;
   color: #ffd;
 }
-.auth-wrapper form{
+.authWrapper form{
   display:flex; 
   flex-direction:column; 
   gap:12px;
@@ -36,7 +51,7 @@ p{
   color:#ffd;
   padding: 8px 0;
 }
-.auth-wrapper label{
+.authWrapper label{
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -47,10 +62,10 @@ p{
   border-left: 3px solid gold;
   transition: transform 0.3s ease;
 }
-.auth-wrapper label:hover{
+.authWrapper label:hover{
   transform: scale(1.05);
 }
-.auth-wrapper input{
+.authWrapper input{
   padding:12px; 
   border-radius:8px; 
   border:1px solid rgba(255,255,255,0.3); 
@@ -71,7 +86,7 @@ p{
     transform: scale(1.05);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.auth-wrapper .submitBtn:hover{
+.authWrapper .submitBtn:hover{
     background-color: gold;
 }
 .submitBtn:active{
@@ -80,11 +95,11 @@ p{
     transform: scale(1);
 }
 
-.auth-wrapper a{
+.authWrapper span{
   color: gold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-.auth-wrapper a:hover{
+.authWrapper span:hover{
   color: skyblue;
 }

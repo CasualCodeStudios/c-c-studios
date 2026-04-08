@@ -9,7 +9,7 @@
 <body>
   <main>
 <!-- regiter - Create an account -->
-    <div class="auth-wrapper" id="registerWrapper">
+    <div class="authwrapper" id="registerWrapper">
       <h1>Create an Account</h1>
     <p>Register to shop with SunRise Valley Farms.</p>
     <form id="registerForm">
@@ -27,11 +27,11 @@
       </label>
       <button class="submitBtn" type="submit">Create account</button>
     </form>
-    <p>Already have an account?<a href="#loginWrapper"> Sign In</a></p>
+    <p>Already have an account?<span onclick="showLogin('loginWrapper')"> Sign In</span></p>
     </div>
 
 <!-- login - Welcome Back -->
-    <div class="auth-wrapper" id="loginWrapper">
+    <div class="authWrapper" id="loginWrapper">
       <h1>Welcome Back</h1>
     <p>Sign in to access your cart and order details.</p>
     <form id="loginForm">
@@ -46,8 +46,10 @@
       <button class="submitBtn" type="submit">Sign In</button>
 
     </form>
-    <p>Don't have an account?<a href="registerWrapper"> Register</a></p>
+    <p>Don't have an account?<span onclick="showRegister('registerWrapper')"> Register</span></p>
     </div>
+
+    <button onclick="showDiv('registerWrapper')">SIGN UP</button>
   </main>
 
   <script src = "main.js"></script>

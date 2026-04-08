@@ -476,3 +476,19 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
       alert('Signed in successfully as ' + userName);
       window.location.href = 'shop.html';
     });
+
+// Login and register animation toggle
+
+function showDiv(divId) {
+  // Hide both forms first
+  document.querySelectorAll('.authWrapper').forEach(authWrapper => {
+    authWrapper.classList.remove('visible');
+  });
+  // Show the selected form
+  const targetDiv = document.getElementById(divId);
+  if (targetDiv) {
+    targetDiv.classList.add('visible');
+  }
+}
+
+
