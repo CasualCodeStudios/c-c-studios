@@ -13,9 +13,18 @@
       <h1>Create an Account</h1>
     <p>Register to shop with SunRise Valley Farms.</p>
     <form id="registerForm">
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
+      <label for="name">
+        Full Name
+        <input name="name" type="text" id="name" placeholder="Full Name" required>
+      </label>
+      <label for="email">
+        Email
+        <input name="email" type="email" id="email" placeholder="Email" required>
+      </label>
+      <label for="password">
+        Password
+        <input name="password" type="password" id="password" placeholder="Password" required>
+      </label>
       <button type="submit">Sign in/up to account</button>
     </form>
     <a href="#loginWrapper">Already have an account? Sign In</a>
@@ -26,8 +35,14 @@
       <h1>Welcome Back</h1>
     <p>Sign in to access your cart and order details.</p>
     <form id="loginForm">
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
+      <label for="email">
+        Email
+        <input name="email" type="email" id="email" placeholder="Email" required>
+      </label>
+      <label for="password">
+        Password
+        <input name="password" type="password" id="password" placeholder="Password" required>
+      </label>
       <button type="submit">Sign In</button>
     </form>
     <a href="registerWrapper">Don't have an account? Register</a>
