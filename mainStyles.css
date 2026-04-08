@@ -1089,6 +1089,7 @@ footer{
     background: none;
 }
 .panel{
+    height: fit-content;
   max-width:420px; 
   margin: 0 10px; 
   background: #006400; 
