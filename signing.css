@@ -62,12 +62,8 @@ h1{
     font-weight: bold;
     font-size: 18px;
     color: #034203;
-    margin-top: 20px;
+    margin-top: 10px;
 }
-.auth-wrapper a{
-  color:#ffd; 
-  font-size:0.9rem; 
-  text-align:center; 
-  display:block; 
-  margin-top:12px;
+.auth-wrapper .submitBtn:hover{
+    background-color: #ffeb3b;
 }
