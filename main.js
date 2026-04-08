@@ -481,8 +481,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
 
 function showDiv(divId) {
   // Hide all panels
-  document.querySelectorAll('.formPanel').forEach(formPanel => {
-    formPanel.classList.remove('active');
+  document.querySelectorAll('.formPanel').forEach(panel => {
+    panel.classList.remove('active');
   });
   // Show the selected one
   document.getElementById(divId).classList.add('active');
