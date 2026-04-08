@@ -497,4 +497,6 @@ function switchDiv(divId) {
   document.getElementById(divId).classList.add('active');
 }
 
-
+function hideDiv(divId) {
+  document.getElementById(divId).classList.remove('active');
+}
