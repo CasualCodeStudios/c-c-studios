@@ -52,14 +52,17 @@ h1{
   background: rgba(255,255,255,0.1); 
   color:#fff;
 }
-.auth-wrapper button{
-  padding:12px; 
-  border:none; 
-  border-radius:8px; 
-  background:#ffd; 
-  color:#006400; 
-  font-weight:700; 
-  cursor:pointer;
+.submitBtn{
+    background-color: #ffd;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #034203;
+    margin-top: 20px;
 }
 .auth-wrapper a{
   color:#ffd; 
