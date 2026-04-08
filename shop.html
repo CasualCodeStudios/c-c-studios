@@ -615,6 +615,51 @@
                 </div>
             </div>
     </section>
+
+      <!-- LOGIN AND REGISTER -->
+
+        <div class="signWrapper">
+            <!-- regiter - Create an account -->
+    <div class="authWrapper formPanel" id="registerWrapper">
+      <h1>Create an Account</h1>
+    <p>Register to shop with SunRise Valley Farms.</p>
+    <form id="registerForm">
+      <label for="name">
+        Full Name
+        <input name="name" type="text" id="name" placeholder="Full Name" required>
+      </label>
+      <label for="email">
+        Email
+        <input name="email" type="email" id="email" placeholder="Email" required>
+      </label>
+      <label for="password">
+        Password
+        <input name="password" type="password" id="password" placeholder="Password" required>
+      </label>
+      <button class="submitBtn" type="submit">Create account</button>
+    </form>
+    <p>Already have an account?<span onclick="switchDiv('loginWrapper')"> Sign In</span></p>
+    </div>
+
+<!-- login - Welcome Back -->
+    <div class="authWrapper formPanel" id="loginWrapper">
+      <h1>Welcome Back</h1>
+    <p>Sign in to access your cart and order details.</p>
+    <form id="loginForm">
+      <label for="email">
+        Email
+        <input name="email" type="email" id="email" placeholder="Email" required>
+      </label>
+      <label for="password">
+        Password
+        <input name="password" type="password" id="password" placeholder="Password" required>
+      </label>
+      <button class="submitBtn" type="submit">Sign In</button>
+
+    </form>
+    <p>Don't have an account?<span onclick="switchDiv('registerWrapper')"> Register</span></p>
+    </div>
+        </div>
   </main>
     <!-- footer -->
     <footer>
