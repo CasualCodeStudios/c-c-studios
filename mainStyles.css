@@ -1125,6 +1125,8 @@ footer{
   background: none;
   border: none;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 .formPanel h1{
   margin-bottom:8px;
