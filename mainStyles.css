@@ -1113,6 +1113,7 @@ footer{
 }
 @media (max-width: 500px) {
   .formPanel {
+    top: 30px;
     left: 0;
     right: 0;
   }
