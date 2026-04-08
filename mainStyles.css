@@ -1122,11 +1122,13 @@ footer{
   position: absolute;
   top: 10px;
   right: 10px;
-  background: none;
+  background: #ffd;
   border: none;
   cursor: pointer;
   width: 30px;
   height: 30px;
+  border-radius: 12px;
+  padding: 3px;
 }
 .formPanel h1{
   margin-bottom:8px;
