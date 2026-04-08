@@ -479,14 +479,16 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
 
 // Login and register animation toggle
 
-function showDiv(divId) {
+function showDiv(registerId, loginId) {
   // Hide both forms first
   document.querySelectorAll('.authWrapper').forEach(authWrapper => {
     authWrapper.classList.remove('visible');
   });
   // Show the selected form
-  const targetDiv = document.getElementById(divId);
-  if (targetDiv) {
+  const registerDiv = document.getElementById(divId);
+  const loginDiv = document.getElementById(loginId);
+
+  if (registerDiv && loginDiv) {
     targetDiv.classList.add('visible');
   }
 }
