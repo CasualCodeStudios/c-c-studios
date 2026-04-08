@@ -79,3 +79,12 @@ p{
   outline: none;
     transform: scale(1);
 }
+
+.auth-wrapper a{
+  color: gold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.auth-wrapper a:hover{
+  color: skyblue;
+}
