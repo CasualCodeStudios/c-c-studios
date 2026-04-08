@@ -32,7 +32,7 @@
             <li><a href="meetTeam.html">Our Team</a></li>
         </ul>
         <div class="navigation-actions">
-          <a href="register.html" class="loginBtn">Sign In</a>
+          <button onclick="showDiv('registerWrapper')" class="loginBtn">Sign Up</button>
         </div>
         </div>
 
@@ -65,7 +65,7 @@
                 <li><a href="meetTeam.html">Our Team</a></li>
                 <li><a href="#contact">Reach Us</a></li>
             </ul>
-            <a href="register.html" class="loginBtn">Sign In</a>
+            <button onclick="showDiv('registerWrapper')" class="loginBtn">Sign Up</button>
         </div>
         </section>
 
@@ -127,7 +127,52 @@
             </div>
         </section>
 
-            <!-- footer -->
+<!-- LOGIN AND REGISTER -->
+
+<!-- regiter - Create an account -->
+    <div class="authWrapper panel" id="registerWrapper">
+      <h1>Create an Account</h1>
+    <p>Register to shop with SunRise Valley Farms.</p>
+    <form id="registerForm">
+      <label for="name">
+        Full Name
+        <input name="name" type="text" id="name" placeholder="Full Name" required>
+      </label>
+      <label for="email">
+        Email
+        <input name="email" type="email" id="email" placeholder="Email" required>
+      </label>
+      <label for="password">
+        Password
+        <input name="password" type="password" id="password" placeholder="Password" required>
+      </label>
+      <button class="submitBtn" type="submit">Create account</button>
+    </form>
+    <p>Already have an account?<span onclick="switchDiv('loginWrapper')"> Sign In</span></p>
+    </div>
+
+<!-- login - Welcome Back -->
+    <div class="authWrapper panel" id="loginWrapper">
+      <h1>Welcome Back</h1>
+    <p>Sign in to access your cart and order details.</p>
+    <form id="loginForm">
+      <label for="email">
+        Email
+        <input name="email" type="email" id="email" placeholder="Email" required>
+      </label>
+      <label for="password">
+        Password
+        <input name="password" type="password" id="password" placeholder="Password" required>
+      </label>
+      <button class="submitBtn" type="submit">Sign In</button>
+
+    </form>
+    <p>Don't have an account?<span onclick="switchDiv('registerWrapper')"> Register</span></p>
+    </div>
+
+    </main>
+
+<!-- footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -162,8 +207,6 @@
             </div>
         </div>
     </footer>
-
-    </main>
 
     <div id="page-transition" class="page-transition">
         <div class="page-container">
