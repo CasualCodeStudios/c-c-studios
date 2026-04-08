@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 10px;
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 221, 0.751);
+    background: yellow;
     border-radius: 50%;
     opacity: 0.6;
     cursor: pointer;
