@@ -1126,7 +1126,7 @@ footer{
   flex-direction:column; 
   gap:12px;
 }
-p{
+.authWrapper p{
   color:#ffd;
   padding: 8px 0;
 }
@@ -1138,6 +1138,7 @@ p{
   box-shadow: 2px 3px 5px black;
   backdrop-filter: blur(30px);
   background: #0036008e;
+  color: #ffd;
   border-left: 3px solid gold;
   transition: transform 0.3s ease;
 }
@@ -1150,6 +1151,7 @@ p{
   border:1px solid rgba(255,255,255,0.3); 
   background: rgba(255,255,255,0.1); 
   color:#fff;
+  outline: none;
 }
 .submitBtn{
     background-color: #ffd;
