@@ -479,18 +479,22 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
 
 // Login and register animation toggle
 
-function showDiv(registerId, loginId) {
-  // Hide both forms first
-  document.querySelectorAll('.authWrapper').forEach(authWrapper => {
-    authWrapper.classList.remove('visible');
+function showDiv(divId) {
+  // Hide all panels
+  document.querySelectorAll('.panel').forEach(panel => {
+    panel.classList.remove('active');
   });
-  // Show the selected form
-  const registerDiv = document.getElementById(divId);
-  const loginDiv = document.getElementById(loginId);
+  // Show the selected one
+  document.getElementById(divId).classList.add('active');
+}
 
-  if (registerDiv && loginDiv) {
-    targetDiv.classList.add('visible');
-  }
+function switchDiv(divId) {
+  // Fade out current active
+  const current = document.querySelector('.panel.active');
+  if (current) current.classList.remove('active');
+
+  // Fade in target
+  document.getElementById(divId).classList.add('active');
 }
 
 
