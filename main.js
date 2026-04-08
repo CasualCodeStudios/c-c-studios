@@ -452,3 +452,27 @@ if(typeof window !== 'undefined'){
     }
   });
 }
+
+
+
+// Authentication system
+// Regiter form submission handler
+document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const userName = document.getElementById('name').value;
+      localStorage.setItem('sunriseLoggedIn', 'true');
+      localStorage.setItem('sunriseUserName', userName);
+      alert('Account created and logged in as ' + userName);
+      window.location.href = 'shop.html';
+    });
+
+// Login form submission handler
+document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const userEmail = document.getElementById('email').value;
+      const userName = userEmail.split('@')[0] || 'user';
+      localStorage.setItem('sunriseLoggedIn', 'true');
+      localStorage.setItem('sunriseUserName', userName);
+      alert('Signed in successfully as ' + userName);
+      window.location.href = 'shop.html';
+    });
