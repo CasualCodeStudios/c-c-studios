@@ -481,8 +481,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
 
 function showDiv(divId) {
   // Hide all panels
-  document.querySelectorAll('.panel').forEach(panel => {
-    panel.classList.remove('active');
+  document.querySelectorAll('.formPanel').forEach(formPanel => {
+    formPanel.classList.remove('active');
   });
   // Show the selected one
   document.getElementById(divId).classList.add('active');
@@ -490,7 +490,7 @@ function showDiv(divId) {
 
 function switchDiv(divId) {
   // Fade out current active
-  const current = document.querySelector('.panel.active');
+  const current = document.querySelector('.formPanel.active');
   if (current) current.classList.remove('active');
 
   // Fade in target

@@ -1088,7 +1088,7 @@ footer{
     align-items: center;
     background: none;
 }
-.panel{
+.formPanel{
     height: fit-content;
   max-width:420px; 
   margin: 0 10px; 
@@ -1106,14 +1106,14 @@ footer{
    transition: opacity 1s ease, transform 1s ease;
   pointer-events: none; /* prevent clicks when hidden */
 }
-.panel.active {
+.formPanel.active {
   opacity: 1;
   transform: scale(1); /* resurface to full size */
   pointer-events: auto;
   z-index: 100;
 }
 
-h1{
+.formPanel h1{
   margin-bottom:8px;
   color: #ffd;
 }
