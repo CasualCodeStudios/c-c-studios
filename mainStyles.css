@@ -1111,7 +1111,12 @@ footer{
   pointer-events: auto;
   z-index: 100;
 }
-
+@media (max-width: 500px) {
+  .formPanel {
+    left: 0;
+    right: 0;
+  }
+}
 .formPanel h1{
   margin-bottom:8px;
   color: #ffd;
