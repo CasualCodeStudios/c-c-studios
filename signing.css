@@ -63,6 +63,7 @@ h1{
     font-size: 18px;
     color: #034203;
     margin-top: 10px;
+    transform: scale(1.05);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .auth-wrapper .submitBtn:hover{
@@ -71,5 +72,5 @@ h1{
 .submitBtn:active{
   border: none;
   outline: none;
-    transform: scale(1.05);
+    transform: scale(1.);
 }
