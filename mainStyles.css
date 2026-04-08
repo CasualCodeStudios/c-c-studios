@@ -1102,7 +1102,7 @@ footer{
   top: 100px;
   right: 10px;
   transform: scale(0.2); 
-   transition: opacity 1s ease, transform 1s ease;
+   transition: opacity 1s ease, transform 1s ease, z-index 0s ease 1s; /* delay z-index change until after animation */
   pointer-events: none; /* prevent clicks when hidden */
 }
 .formPanel.active {
